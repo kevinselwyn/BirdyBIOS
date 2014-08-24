@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
 
 #define COMPANY          "Polytron"
 #define COMPANY_FULL     "Polytron Systems Corporation, INC."
