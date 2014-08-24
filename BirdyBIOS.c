@@ -51,7 +51,7 @@ void actions() {
 	printf("%s\n", TIMESTAMP);
 }
 
-int main(int argc, char *argv[]) {
+int main() {
 	system("clear");
 	copyright();
 
