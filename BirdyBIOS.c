@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define COMPANY          "Polytron"
 #define COMPANY_FULL     "Polytron Systems Corporation, INC."
@@ -21,38 +22,38 @@
 #define FISH_KEY         "Alt-F2"
 #define TIMESTAMP        "14/12/2009-Plytrn-PPP-2.0"
 
-void copyright() {
+static void copyright() {
 	printf("%s -- %s - V%s, a %s Ally\n", COMPANY, BIOS, VERSION, ALLY);
 	printf("Copyright (C) %s, %s\n\n", COPYRIGHT_YEAR, COMPANY_FULL);
 	printf("%s Rev %s\n", BIOS_FULL, REVISION);
 }
 
-void processor() {
+static void processor() {
 	printf("\nMain Processor : %s\n", PROCESSOR);
 }
 
-void memory() {
+static void memory() {
 	printf("Memory Testing : %s OK\n", MEMORY);
 }
 
-void primary() {
+static void primary() {
 	printf("\nMemory Frequency is at %s, %s mode\n", FREQUENCY, MODE);
 	printf("  Primary Master : %s\n", PRIMARY_MASTER);
 	printf("   Primary Slave : %s\n", PRIMARY_SLAVE);
 }
 
-void secondary() {
+static void secondary() {
 	printf("Secondary Master : %s\n", SECONDARY_MASTER);
 	printf(" Secondary Slave : %s\n", SECONDARY_SLAVE);
 }
 
-void actions() {
+static void actions() {
 	printf("\n\n\n\n\n\nPress %s to enter SETUP  ; press %s to enter FISH utility\n", SETUP_KEY, FISH_KEY);
 	printf("%s\n", TIMESTAMP);
 }
 
 int main() {
-	system("clear");
+	(void)system("clear");
 	copyright();
 
 	sleep(1);
@@ -71,7 +72,7 @@ int main() {
 	actions();
 
 	sleep(2);
-	system("clear");
+	(void)system("clear");
 
 	return 0;
 }
