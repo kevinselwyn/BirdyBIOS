@@ -1,14 +1,14 @@
-#BirdyBIOS
+# BirdyBIOS
 
 Boot-up sequence from Fez
 
-##Installation
+## Installation
 
 ```bash
 make && sudo make install
 ```
 
-##Usage
+## Usage
 
 ```bash
 BirdyBIOS
